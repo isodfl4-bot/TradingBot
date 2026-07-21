@@ -9,6 +9,7 @@ from bos import detect_bos
 
 from choch import detect_choch
 from fvg import detect_fvg
+from signal_engine import generate_signal
 for symbol in SYMBOLS:
 
     print("=" * 60)
@@ -41,3 +42,7 @@ bullish_fvg, bearish_fvg = detect_fvg(df)
 print(f"Bullish FVG : {len(bullish_fvg)}")
 
 print(f"Bearish FVG : {len(bearish_fvg)}")
+
+signal = generate_signal(df)
+
+print(signal)
